@@ -1,4 +1,4 @@
-import * as playerActions from "./playersActionCreator";
+import * as playerActions from "./playerActionCreator";
 import { ACTION_TYPES } from "../constants";
 
 it("should return fetch init action", () => {
@@ -13,7 +13,7 @@ it("should return fetch init action", () => {
   expect(action).toEqual(expectedAction);
 });
 
-t("should return fetch success action", () => {
+it("should return fetch success action", () => {
   const players = [{ some: "value" }, { some1: "valu1" }];
   const expectedAction = {
     type: ACTION_TYPES.PLAYERS_FETCH_SUCCESS,

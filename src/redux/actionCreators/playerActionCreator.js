@@ -6,3 +6,17 @@ export const fetchPlayers = (url) => {
     url,
   };
 };
+
+export const fetchSuccess = (players) => {
+  return {
+    type: ACTION_TYPES.PLAYERS_FETCH_SUCCESS,
+    players,
+  };
+};
+
+export const fetchFailure = (errorMessage) => {
+  return {
+    type: ACTION_TYPES.PLAYERS_FETCH_FAILURE,
+    errorMessage,
+  };
+};
