@@ -6,3 +6,17 @@ export const shufflePlayers = (players) => {
     players,
   };
 };
+
+export const shuffleSuccess = (shuffledPlayers) => {
+  return {
+    type: ACTION_TYPES.PLAYERS_SHUFFLE_SUCCESS,
+    shuffledPlayers,
+  };
+};
+
+export const shuffleFailure = (errorMessage) => {
+  return {
+    type: ACTION_TYPES.PLAYERS_SHUFFLE_FAILURE,
+    errorMessage,
+  };
+};
