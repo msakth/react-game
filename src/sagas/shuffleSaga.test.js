@@ -6,7 +6,7 @@ import UtilityHelper from "../utility";
 import shuffleSaga, {
   shufflePlayers,
   getFirstThreePlayeers,
-} from "./shufflesaga";
+} from "./shuffleSaga";
 import { ACTION_TYPES } from "../redux/constants";
 
 describe("src/sagas/shuffleSaga", () => {

@@ -1,4 +1,4 @@
-import * as playerActions from "./playerActionCreator";
+import * as playerActions from "./playersActionCreator";
 import { ACTION_TYPES } from "../constants";
 
 it("should return fetch init action", () => {
