@@ -12,3 +12,27 @@ it("should return shuffle init action", () => {
 
   expect(action).toEqual(expectedAction);
 });
+
+it("should return shuffle success action", () => {
+  const shuffledPlayers = [{ some1: "value1" }, { some: "valu" }];
+  const expectedAction = {
+    type: ACTION_TYPES.PLAYERS_SHUFFLE_SUCCESS,
+    shuffledPlayers,
+  };
+
+  const action = shuffleActions.shuffleSuccess(shuffledPlayers);
+
+  expect(action).toEqual(expectedAction);
+});
+
+it("should return shuffle failure action", () => {
+  const errorMessage = "error message";
+  const expectedAction = {
+    type: ACTION_TYPES.PLAYERS_SHUFFLE_FAILURE,
+    errorMessage,
+  };
+
+  const action = shuffleActions.shuffleFailure(errorMessage);
+
+  expect(action).toEqual(expectedAction);
+});
