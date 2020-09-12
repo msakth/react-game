@@ -1,9 +1,8 @@
-import React from 'react';
-import { render } from '@testing-library/react';
-import App from './App';
+import React from "react";
+import { render, waitForElement } from "@testing-library/react";
+import App from "./App";
 
-test('renders learn react link', () => {
+test("renders App component", async () => {
   const { getByText } = render(<App />);
-  const linkElement = getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  await waitForElement(() => getByText(/Guess the player with highest FPPG/i));
 });
